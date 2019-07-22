@@ -111,6 +111,8 @@ app.use("/articles",articles);
 app.use("/users",users);
 
 //listen start server
-app.listen(3000, function() {
-  console.log("successfully loaded");
-});
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port);
