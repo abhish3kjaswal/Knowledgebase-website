@@ -21,7 +21,7 @@
     "passport-local": "^1.0.0",
     "pug": "^2.0.4"
   },
-  "engine":{
-    
+  "engines":{
+    "node": "v10.15.3"
   }
 }
