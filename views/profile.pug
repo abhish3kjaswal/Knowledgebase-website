@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .container
+      h2 My profile
+      ul.list-group
+        li.list-group-item
+          h5 | NAME:  #{user.name} 
+        br
+        li.list-group-item
+          h5 | EMAIL: #{user.email} 
+        br
+        li.list-group-item
+          h5 | USERNAME: #{user.username} 
+        br
+        if user
+            a.btn.btn-dark(href='/users/profile/ed_profile/'+user._id) Edit 
+            br 
+            a.btn.btn-primary(href='/users/profile/my_article/'+user._id) My Articles
+  

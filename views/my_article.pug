@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .container
+    h1 #{user.name}
+    ul.list-group
+      each article, i in articles
+        li.list-group-item.myarticle
+          a(href='/articles/'+article._id)= article.title 
+  
+
+    

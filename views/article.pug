@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .container
+    h1= article.title
+    br
+    h4 Author:  #{author}
+    br
+    h5 Description:
+    h6  #{article.body}
+    hr
+    if user
+      if user.id ==article.author
+        a.btn.btn-secondary.btnspace(href='/articles/edit/'+article._id) Edit
+        a.btn.btn-danger.delete-article.btnspace(href='#',data-id= article._id) Delete
+        
+        
+  

@@ -1,0 +1,59 @@
+doctype html
+html
+  head
+    title knowledgebase
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet' href='/css/style.css')
+    link(href='https://fonts.googleapis.com/css?family=Pacifico&display=swap', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Butterfly+Kids|Caveat|Cookie|Permanent+Marker|Courgette|Lobster|Asap|Dancing+Script|Ewert|Kaushan+Script|Pacifico|Permanent+Marker|Russo+One|Satisfy&display=swap', rel='stylesheet')
+    link(rel='icon', href='/images/icon1.jpg')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.2/css/all.css', integrity='sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr', crossorigin='anonymous')
+
+        
+  body
+    nav.navbar.navbar-expand-md.navbar-dark.bg-dark
+         a.navbar-brand.mb-0.h1(href='/') Knowledgebase
+         button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExampleDefault', aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
+           span.navbar-toggler-icon
+         #navbarsExampleDefault.collapse.navbar-collapse
+           ul.navbar-nav.mr-auto
+             li.nav-item
+               a.nav-link(href='/') Home
+             if user
+               li.nav-item
+                 a.nav-link(href='/articles/add') Add article
+           ul.navbar-nav.mr-right
+             if user
+               li.nav-item.dropdown
+                  a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                    | #{user.name}
+                  .dropdown-menu(aria-labelledby='navbarDropdown')
+                    a.dropdown-item(href='/users/profile/'+user._id) Profile
+                    .dropdown-divider
+                    a.dropdown-item(href='/users/logout') Logout
+             else   
+               li.nav-item
+                 a.nav-link(href='/users/register') Register
+               li.nav-item
+                 a.nav-link.btn.btn-outline-success.my-2.my-sm-0(href='/users/login') Login
+             
+             
+    .container
+      br
+      != messages('message', locals)
+      if errors
+        each error , i in errors
+          div(class='alert alert-danger') #{error.msg}
+      block content
+      br
+      hr
+      footer.container-fluid
+              i.social-icon.fab.fa-twitter.footlogo
+              i.social-icon.fab.fa-facebook-f.footlogo
+              i.social-icon.fab.fa-instagram.footlogo
+              i.social-icon.fas.fa-envelope.footlogo
+              p.footcopy © Copyright 2019 Knowledgebase
+
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+    script(src='/js/main.js')

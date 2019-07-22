@@ -1,0 +1,124 @@
+.navbar-brand{
+  margin-left: 50px;
+}
+.navbar-nav > li{
+  margin-left:20px;
+  margin-right:20px;
+
+}
+
+.alert-error{
+  color: red;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  padding: 10px;
+
+}
+.alert-success_msg{
+  color: green;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  padding: 10px;
+
+}
+
+#navbarDropdown{
+
+  margin-right:75px;
+}
+
+/* image */
+body {
+    background: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+
+    margin: 20px 0 20px;
+
+    font-family: 'Dancing Script', cursive;
+
+    small {
+        display: block;
+        font-size: 15px;
+        padding-top: 8px;
+        color: gray;
+    }
+
+}
+.articlebody{
+  font-family: 'Lobster', cursive;
+  font-size: 80px;
+}
+.bordercaro{
+  border-style: solid;
+  border-color: grey;
+}
+.tableborder{
+  border-style: solid;
+}
+.articleitem{
+  font-family: 'Asap', sans-serif;
+}
+.footlogo{
+  padding: 15px;
+  align-items: center;
+}
+.footcopy{
+  text-align: center;
+  padding: 5px;
+
+}
+h2{
+  text-align: center;
+    font-family: 'Courgette', cursive;
+}
+h4{
+font-family: 'Lobster', cursive;
+font-size: 30px;
+}
+h5{
+  font-family: 'Courgette', cursive;
+  font-size: 30px;
+  padding: 5px;
+}
+h6{
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+}
+a{
+  font-family: 'Courgette', cursive;
+}
+.hrefa{
+font-family: 'Satisfy', cursive;
+  font-size: 30px;
+  color: #263859;
+}
+.myarticle{
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+}
+p{
+font-family: 'Satisfy', cursive;
+  margin: 20px 0 20px;
+  font-size: 25px;
+}
+.btnspace{
+  margin: 5px;
+
+}
+label{
+  font-family: 'Domine', serif;
+  padding: 5px;
+}
+
+/* style button */
